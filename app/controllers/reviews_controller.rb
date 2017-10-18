@@ -1,8 +1,10 @@
 class ReviewsController < ApplicationController
 
+  before_action :find_review, only: [:edit, :update, :destroy]
+  before_action :find_product, only: [:create, :edit, :update]
+
   def create
     @review = Review.create
-    @product = Product.find(params[:product_id])
     @review.review = params[:review][:review]
     @review.product = @product
 
@@ -13,13 +15,9 @@ class ReviewsController < ApplicationController
   end
 
   def edit
-    @review = Review.find(params[:id])
-    @product = Product.find(params[:product_id])
   end
 
   def update
-    @review = Review.find(params[:id])
-    @product = Product.find(params[:product_id])
     @review.review = params[:review][:review]
     @review.product = @product
 
@@ -32,8 +30,6 @@ class ReviewsController < ApplicationController
   end
 
   def destroy
-    @review = Review.find(params[:id])
-
     if @review.destroy
       flash[:notice] = "Review has been successfully deleted."
       redirect_to product_path(params[:product_id])
@@ -42,4 +38,11 @@ class ReviewsController < ApplicationController
     end
   end
 
+  def find_review
+    @review = Review.find(params[:id])
+  end
+
+  def find_product
+    @product = Product.find(params[:product_id])
+  end
 end
