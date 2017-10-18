@@ -9,6 +9,7 @@
     <li>
       <p><%= review.review %></p>
       <p>Posted on: <%= review.created_at %></p>
+      <p><%= link_to "Edit Review", edit_product_review_path(@product, review)%> </p>
     </li>
     <% end %>
 </ul>
