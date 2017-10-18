@@ -2,3 +2,13 @@
 <p><%= link_to "Edit Product", edit_product_path(@product) %> | <%= link_to "Delete", product_path(@product), method: :delete, data: {confirm: "Are you sure you want to delete this product?" } %> </p>
 <p><%= @product.description %></p>
 <p><%= @product.price_in_dollars %></p>
+
+<h2>Product Reviews</h2>
+<ul>
+  <% @product.reviews.each do |review| %>
+    <li>
+      <p><%= review.review %></p>
+      <p>Posted on: <%= review.created_at %></p>
+    </li>
+    <% end %>
+</ul>
