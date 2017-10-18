@@ -9,6 +9,15 @@
   </head>
 
   <body>
+    <header>
+      <h1>Rainforest</h1>
+        <nav class="">
+          <ul>
+            <li><%= link_to("Home", root_url) %></li>
+            <li><%= link_to("Add a Product", "/products/new") %></li>
+          </ul>
+        </nav>
+    </header>
     <%= yield %>
   </body>
 </html>
