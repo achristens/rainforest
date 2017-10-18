@@ -17,7 +17,7 @@ Product.create(
 + Maximum formulation limit of adenosine effective for
    wrinkle improvement and skin regeneration.\n
 + Firm, hydrating finish with excellent adhesion.\n",
-  price_in_cents: 18.90
+  price_in_cents: 1890
 )
 
 Product.create(
@@ -26,7 +26,7 @@ Product.create(
 + Low-irritation exfoliation.\n
 + Skin tone & texture improvement.\n
 + Antibacterial.\n",
-  price_in_cents: 22
+  price_in_cents: 2200
 )
 
 Product.create(
@@ -37,7 +37,7 @@ Product.create(
    and 95% raw materials for anti-aging effects.\n
 + Only made with 10 core ingredients without the use of purified water
    as a high concentration and high strength delay-aging serum.\n",
-  price_in_cents: 32
+  price_in_cents: 3200
 )
 
 Product.create(
@@ -48,7 +48,7 @@ Paraben-free / Phenoxyethanol-free\n
 + Optimal hydration balance to regulate sebum.\n
 + Perfect for people who have
    enlarged pores or oily looking skin.\n",
-  price_in_cents: 32
+  price_in_cents: 3200
 )
 
 Product.create(
@@ -57,5 +57,5 @@ Product.create(
 + Exfoliating.\n
 + Blackhead & whitehead removal.\n
 + Deep cleanse.\n",
-  price_in_cents: 19.90
+  price_in_cents: 1990
 )
