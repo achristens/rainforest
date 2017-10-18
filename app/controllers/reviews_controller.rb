@@ -9,8 +9,6 @@ class ReviewsController < ApplicationController
     if @review.save
       flash.notice = "Review has been successfully created."
       redirect_to @product
-    else
-      render "products/show"
     end
   end
 
