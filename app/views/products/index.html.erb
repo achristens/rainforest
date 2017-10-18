@@ -3,7 +3,7 @@
     <li>
       <p><%= product.name %></p>
       <p><%= product.description %></p>
-      <p>$<%= product.price_in_cents %></p>
+      <p><%= product.price_in_dollars %></p>
       <p><%= link_to "View Product", "/products/#{product.id}" %></p>
     </li>
   <% end %>
