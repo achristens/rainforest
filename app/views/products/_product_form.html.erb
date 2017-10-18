@@ -1,0 +1,30 @@
+<%= form_for @product do |f| %>
+  <div class="field">
+    <p><%= f.label :name %></p>
+    <p><%= f.text_field :name %></p>
+  </div>
+
+  <div class="field">
+    <p><%= f.label :description %></p>
+    <p><%= f.text_area :description %></p>
+  </div>
+
+  <div class="field">
+    <p><%= f.label :price_in_cents, 'Price' %></p>
+    <p><%= f.text_field :price_in_cents %></p>
+  </div>
+  <div class="field">
+    <p><%= f.submit %></p>
+  </div>
+  <% if @product.errors.any? %>
+    <div class="error_explanation">
+      <h2><%= pluralize(@product.errors.count, "error") %>
+      prohibited this product from being saved:</h2>
+      <ul>
+        <% @product.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<% end %>
