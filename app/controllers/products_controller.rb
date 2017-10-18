@@ -8,6 +8,7 @@ class ProductsController < ApplicationController
   end
 
   def new
+    @product = Product.new
   end
 
   def edit
@@ -29,5 +30,5 @@ class ProductsController < ApplicationController
       render :show
     end
   end
-  
+
 end
