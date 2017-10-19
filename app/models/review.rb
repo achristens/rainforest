@@ -3,4 +3,6 @@ class Review < ApplicationRecord
 
   validates :review, presence: true
 
+  default_scope { order("created_at DESC") }
+
 end
